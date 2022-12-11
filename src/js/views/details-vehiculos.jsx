@@ -10,7 +10,8 @@ export const DetailsVehiculo = props => {
 
 	
 	useEffect(() => {
-		actions.getDetalleVehiculo(params.id)
+		actions.getDetalleVehiculo(params.id);
+		window.scrollTo(0, 0)
 	}, []);
 
 	return (

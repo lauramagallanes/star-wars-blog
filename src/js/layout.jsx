@@ -9,6 +9,7 @@ import { DetailsVehiculo } from "./views/details-vehiculos.jsx";
 import injectContext from "./store/appContext";
 
 import { Navbar } from "./component/navbar.jsx";
+import { Footer } from "./component/footer.jsx";
 
 //create your first component
 const Layout = () => {
@@ -17,7 +18,7 @@ const Layout = () => {
 	const basename = process.env.BASENAME || "";
 
 	return (
-		<div>
+		<div style={{backgroundImage: `url("https://images2.alphacoders.com/591/59190.jpg")`}}>
 			<BrowserRouter basename={basename}>
 				<ScrollToTop>
 					<Navbar />
@@ -28,9 +29,9 @@ const Layout = () => {
 						<Route exact path="/details-planetas/:id">
 							<DetailsPlanetas />
 						</Route>
-						<Route exact path="/details-vehiculos/:id">
+						{/* <Route exact path="/details-vehiculos/:id">
 							<DetailsVehiculo />
-						</Route>
+						</Route> */}
 						<Route exact path="/details-personajes/:id">
 							<DetailsPersonajes />
 						</Route>
@@ -38,7 +39,7 @@ const Layout = () => {
 							<h1>Not found!</h1>
 						</Route>
 					</Switch>
-					
+					<Footer/>
 				</ScrollToTop>
 			</BrowserRouter>
 		</div>

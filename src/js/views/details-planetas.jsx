@@ -9,7 +9,8 @@ export const DetailsPlanetas = props => {
 	const params = useParams();
 
 	useEffect(() => {
-		actions.getDetallePlaneta(params.id)
+		actions.getDetallePlaneta(params.id);
+		window.scrollTo(0, 0)
 	}, []);
 
 	return (

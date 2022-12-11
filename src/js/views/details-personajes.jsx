@@ -10,7 +10,8 @@ export const DetailsPersonajes = props => {
 
 
 	useEffect(() => {
-		actions.getDetallePersonaje(params.id)
+		actions.getDetallePersonaje(params.id);
+		window.scrollTo(0, 0)
 	}, []);
 
 	return (

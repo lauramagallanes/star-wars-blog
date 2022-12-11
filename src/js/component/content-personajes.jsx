@@ -21,7 +21,7 @@ const tab = <>&nbsp;&nbsp;&nbsp;&nbsp;</>;
     <p className="card-text">Hair color: { item.hair_color}</p>
     <p className="card-text">Eye color: { item.eye_color}</p>
     <Link className="btn btn-outline-light" to={"/details-personajes/"+ (id+1) } >Learn More</Link>{tab}{tab}{tab}{tab}
-    <Link className= {store.classNameFavoritos} to="/" onClick={()=> {actions.getListaFavoritos(item); actions.cambiaClassNameFavoritos(id)}}><i className="far fa-heart"></i></Link>
+    <Link className= {store.classNameFavoritos} to="/" onClick={()=> actions.getListaFavoritos(item)}><i className="far fa-heart"></i></Link>
   </div>
 </div>)}
         </div>

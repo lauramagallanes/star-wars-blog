@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect} from "react";
 
 import "../../styles/home.css";
 import {Navbar} from "../component/navbar.jsx";
@@ -7,7 +7,14 @@ import {ContentPersonajes} from "../component/content-personajes.jsx";
 import {ContentPlanetas} from "../component/content-planetas.jsx";
 import {ContentVehiculos} from "../component/content-vehiculos.jsx";
 
-export const Home = () => (
+export const Home = () => {
+	useEffect(() => {
+		
+		window.scrollTo(0, 0)
+	}, []);
+	
+	return (
+
     <div>
         <div>
             
@@ -16,8 +23,9 @@ export const Home = () => (
 		<div>
 			<ContentPlanetas/>
 		</div>
-		<div>
+		{/* <div>
 			<ContentVehiculos/>
-		</div>
+		</div> */}
     </div>
-);
+	);
+	}

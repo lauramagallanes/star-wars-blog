@@ -21,7 +21,7 @@ export const ContentPlanetas = () => {
     <p className="card-text">Rotation period: { item.rotation_period}</p>
     <p className="card-text">Climate: { item.climate}</p>
           <Link className="btn btn-outline-light" to={"/details-planetas/" + (id + 1)} >Learn More</Link>{tab}{tab}{tab}
-          <Link className={store.classNameFavoritos} to="/" onClick={() => {actions.getListaFavoritos(item); actions.cambiaClassNameFavoritos(item)}}><i className="far fa-heart"></i></Link>
+          <Link className={store.classNameFavoritos} to="/" onClick={() => actions.getListaFavoritos(item)}><i className="far fa-heart"></i></Link>
         </div>
       </div>
 
